@@ -23,12 +23,24 @@ $(".select-character").on('click', function(event) {
 }) 
 
 
+$(document).on("click", ".imgGIF", function (event) {
+    event.preventDefault();
 
+    var clickedGif = $(this).attr("data-state");
+
+    // Animate Gif
+    if (clickedGif === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {    // Still Gif
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
 
 
 //click function to display gids
 $(document).on('click', '.gifButtons' , function() {
-
     var character = $(this).attr("data-character");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         character + "&api_key=25fTdjuRA6Q33bvvOOxRhWMfNSd1V6Je&limit=10";
@@ -38,25 +50,25 @@ $(document).on('click', '.gifButtons' , function() {
         method: "GET"
         }).then(function(response) {
             var results=response.data;
-
         for(var i=0; i <results.length; i++) {
-
-            if (results[i].rating !== "r") {
-            
+            var staticGif = results[i].images.downsized_still.url;
+            var animateGif = results[i].images.downsized.url;
+            if (results[i].rating !== "r");
             var gifDiv = $("<div>");
-            
             var rating = results[i].rating;
-
             var p = $("<p>").text("Rated: " + rating);
-
             var imgGIF =$("<img>");
-
-            imgGIF.attr("src", results[i].images.fixed_width.url);
+            imgGIF.addClass("imgGIF");
+            imgGIF.attr("src", staticGif);
+            imgGIF.attr("data-state", "still");
+            imgGIF.attr("data-still", staticGif);
+            imgGIF.attr("data-animate", animateGif);
             gifDiv.prepend(p);
             gifDiv.prepend(imgGIF);
             $("#resultsBody").prepend(gifDiv);
 
             }
-        }
+        });
 });
-});
+
+

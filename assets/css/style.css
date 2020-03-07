@@ -1,18 +1,17 @@
 body {
-    background-image: url(../images/water.jpeg);
-    background-size: 100vh, 100vw;
-    background-attachment:flex;
+    background-image: url(../images/photo-1579693059947-fc6c83ac9860.jpeg);
+    background-size: cover;
 }
 header {
     font-family: 'Poiret One', cursive;
-    font-size: 3rem;
-    color: #f3b15b;
+    font-size: 3.5rem;
+    color: #4e575c;
     text-shadow:
-    3px 3px 0 #4e575c,
-    -1px -1px 0 #4e575c,  
-    1px -1px 0 #4e575c,
-    -1px 1px 0 #4e575c,
-    1px 1px 0 #4e575c;
+    3px 3px 0 #f3b15b,
+    -1px -1px 0 #f3b15b,  
+    1px -1px 0 #f3b15b,
+    -1px 1px 0 #f3b15b,
+    1px 1px 0 #f3b15b;
 }
 .wrapper {
     width: 1040px;
@@ -22,7 +21,7 @@ header {
 
 .searchContainer {
     width: 30%;
-    border: 3px solid #f3b15b;
+    border: 1px solid #f3b15b;
     border-radius: 10px;
     font-family: 'Poiret One', cursive;
     font-size: 1.5rem;
@@ -32,7 +31,7 @@ header {
 button.gifButtons, .select-character {
     padding: 5px;
     margin: 5px;
-    border: 2px solid #4e575c;
+    border: 2px solid #303b3e;
     border-radius: 10px;
     background-color: #f3b15b;
     font-family: 'Poiret One', cursive;
@@ -47,14 +46,14 @@ input {
     padding: 10px;
     border-radius: 9px 9px 0 0 ;
     font-size: 2rem;
-    background-color: #31405f;  
+    background-color: #303b3e;  
     color: #f3b15b;
 }
 
 #resultsHeader, #resultsBody {
     font-family: 'Poiret One', cursive;
     width: 60%;
-    border: 3px solid #f3b15b;
+    border: 1px solid #f3b15b;
     border-radius: 10px;
     float: right;
     margin-bottom: 25px;
@@ -64,13 +63,13 @@ input {
 #resultsHeader{
     border-radius: 9px;
     font-size: 2rem;
-    background-color: #31405f;  
+    background-color: #303b3e;  
     color: #f3b15b;
     padding: 10px 20px 10px 20px;
 }
     
 #resultsBody, #forms {
-    background-color:#31405f;
+    background-color:#303b3e;
     color: #e8eff1;
     padding-bottom: 15px;
     border-radius: 0 0 9px 9px;
@@ -79,7 +78,7 @@ input {
 #resultsBody {
     border-radius: 9px;
     overflow-y: auto;
-    height: 535px;
+    height: 675px;
 }
 
 img{
