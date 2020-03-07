@@ -1,0 +1,49 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background-image: url(../images/laura-vinck-Hyu76loQLdk-unsplash.jpg)
+}
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.searchContainer {
+    margin: auto;
+    width: 50%;
+    border: 2px solid rgb(179, 176, 176);
+    border-radius: 10px;
+    
+}
+
+#searchHeader {
+    
+    padding: 10px;
+    border-bottom: 2px solid rgb(179, 176, 176);
+    font-size: 24px;
+    background-color: #E0BBE4;  
+    background-size: cover;
+    color: white;
+}
+
+.gifResults {
+    margin: auto;
+    width: 50%;
+    border: 2px solid rgb(179, 176, 176);
+    border-radius: 10px;
+    
+}
+
+#resultsHeader{
+    
+    padding: 10px;
+    border-bottom: 2px solid rgb(179, 176, 176);
+    font-size: 24px;
+    background-color: #E0BBE4;  
+    background-size: cover;
+    color: white;
+}
+    
+#resultsBody, #forms {
+    background-color: white;
+}
